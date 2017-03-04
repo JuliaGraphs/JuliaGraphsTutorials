@@ -6,9 +6,9 @@ Tutorials in the form of Jupyter notebooks for the JuliaGraphs ecosystem.
 
 ## Notebooks
 
-- Notebook 1
-- Notebook 2
+- [Basic usage](Basics.ipynb)
+- [Visualization](Visualization.ipynb)
 
 ## Contributing
 
-Please let us know if any of the notebooks is outdated and not functioning with the current release of `LightGraphs.jl`. Contributions are very welcome, please submit a pull request or open an issue with an example that you feel is missing.
+Please let us know if any of the notebooks are outdated or not functioning with the current release of `LightGraphs.jl`. Contributions are very welcome, please submit a pull request or open an issue with an example that you feel is missing.
