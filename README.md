@@ -7,7 +7,7 @@ Tutorials in the form of Jupyter notebooks for the JuliaGraphs ecosystem.
 ## Notebooks
 
 - [Basic usage](Basics.ipynb)
-- [Visualization](Visualization.ipynb)
+- [Graph traversal](GraphTraversal.ipynb)
 
 ## Contributing
 
