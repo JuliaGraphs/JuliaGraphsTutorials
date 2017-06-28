@@ -6,8 +6,10 @@ Tutorials in the form of Jupyter notebooks for the JuliaGraphs ecosystem.
 
 ## Notebooks
 
-- [Basic usage](Basics.ipynb)
-- [The DAG of Julia packages](DAG-Julia-Pkgs.ipynb)
+The notebooks are better viewed on nbviewer:
+
+- [Basic usage](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Basics.ipynb)
+- [The DAG of Julia packages](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/DAG-Julia-Pkgs.ipynb)
 
 ## Contributing
 
