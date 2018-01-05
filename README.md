@@ -10,6 +10,7 @@ The notebooks are better viewed on nbviewer:
 
 - [Basic usage](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Basics.ipynb)
 - [The DAG of Julia packages](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/DAG-Julia-Pkgs.ipynb)
+- [Watts model](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Watts-Model.ipynb)
 
 ## Contributing
 
