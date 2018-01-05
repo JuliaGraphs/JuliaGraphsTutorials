@@ -1,0 +1,109 @@
+using Distributions
+using LightGraphs
+
+using Plots
+plotlyjs()
+
+srand(20130810)
+
+function fraction_engaged(node::Int64,
+                          G::LightGraphs.SimpleGraphs.SimpleGraph,
+                          node_status::Vector{Int64})
+
+    """
+    Computes the fraction of neighbors engaged within the neighborhood
+    of a given node. It uses the node status to check the engagement status of
+    each of the nodes neighbors
+    """
+    num_engaged_neighbors = 0
+    for nbr in neighbors(G, node)
+        if node_status[nbr] == 1
+            num_engaged_neighbors += 1
+        end
+    end
+    return num_engaged_neighbors/length(neighbors(G, node))
+end
+
+function update_node_status!(G::LightGraphs.SimpleGraphs.SimpleGraph,
+                             node_status::Vector{Int64},
+                             threshold::Vector{Float64})
+    """
+    This function executes the random asynchronous updates of the entire network
+    at each time step. In this conceptualization, each time step comprises mini
+    time steps where a randomly shuffled node list updates at each iteration
+    """
+    nodes = collect(vertices(G))
+
+    for node in shuffle!(nodes)
+        if node_status[node] == 0
+            if fraction_engaged(node, G, node_status) > threshold[node]
+                node_status[node] = 1
+            end
+        end
+    end
+
+    return nothing
+end
+
+function diffusion_simulation(n::Int64,
+                              z::Int64,
+                              threshold::Vector{Float64},
+                              T::Int64,
+                              n_realizations::Int64)
+    """
+    Executes the diffusion simulation.
+    It creates a new Watts-Strogatz graph at each realization and seeds a single node
+    (initialization). It then updates the network for the defined tnumber of time
+    steps.
+
+    The idea is to run the diffusion simulation a very large number
+    of times and see in how many of these simulations we observe a
+    global cascade, i.e., number of nodes engaged after the simulation
+    process is a sizeable proportion of the network
+
+    Hyper Parameters of the model
+    ----------
+    1. Number of nodes in the Watts-Strogatz graph (n)
+    2. Average degree (z)
+    3. Threshold (distribution or a specific value)
+    4. Time steps for simulation to be run
+    5. Number of realizations
+
+    Output
+    -----------
+    A vector of number of engaged nodes at the end of each realization
+    of the simulation
+
+    Intended usage of results
+    -----------
+    Plot the cascades on the z-ϕ phase space; replicate results from
+    "A simple model of global cascades on random networks", Watts (2002)
+    """
+
+    output = Vector{Int64}(n_realizations)
+    beta = z/n
+
+    for r in 1:n_realizations
+        G = watts_strogatz(n, z, beta)
+        # Select a single random node from the network and seed it
+        node_status = zeros(Int64, nv(G))
+        node_status[sample(vertices(G))] = 1
+
+        # Update the network for predefined number of time steps
+        for _ in 1:T
+            update_node_status!(G, node_status, threshold)
+        end
+        output[r] = sum(node_status)
+    end
+
+    return output
+
+end
+
+const N = 10^4
+
+@time data = diffusion_simulation(N, 5, fill(0.18, N), 50, 100)
+
+histogram(data); xlabel!("Number of engaged nodes"); ylabel!("Frequency")
+plot!(legend=:none)
+
