@@ -9,9 +9,9 @@ Tutorials in the form of Jupyter notebooks for the JuliaGraphs ecosystem.
 The notebooks are better viewed on nbviewer:
 
 - [Basic usage](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Basics.ipynb)
-- [The DAG of Julia packages](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/DAG-Julia-Pkgs.ipynb)
+- [DAG of Julia packages](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/DAG-Julia-Pkgs.ipynb)
 - [Watts model](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Watts-Model.ipynb)
-- [The Tipping Point](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/TheTippingPoint.ipynb)
+- [Tipping Point](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/TheTippingPoint.ipynb)
 
 ## Contributing
 
