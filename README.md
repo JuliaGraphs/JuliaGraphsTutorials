@@ -12,6 +12,7 @@ The notebooks are better viewed on nbviewer:
 - [DAG of Julia packages](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/DAG-Julia-Pkgs.ipynb)
 - [Watts model](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Watts-Model.ipynb)
 - [Tipping Point](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/TheTippingPoint.ipynb)
+- [Talk of the network](http://nbviewer.jupyter.org/github/JuliaGraphs/JuliaGraphsTutorials/blob/master/Talk-of-the-network.ipynb)
 
 ## Contributing
 
