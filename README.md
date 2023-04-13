@@ -1,6 +1,5 @@
 # JuliaGraphsTutorials
-
-[![Join the chat at https://gitter.im/JuliaGraphs/LightGraphs.jl](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/JuliaGraphs/LightGraphs.jl)
+[![Slack](https://img.shields.io/badge/Join%20Our%20Community-Slack-blue)](https://app.slack.com/client/T68168MUP/C759LHXV0)
 
 Tutorials in the form of Jupyter notebooks for the JuliaGraphs ecosystem.
 
@@ -16,4 +15,4 @@ The notebooks are better viewed on nbviewer:
 
 ## Contributing
 
-Please let us know if any of the notebooks are outdated or not functioning with the current release of `LightGraphs.jl`. Contributions are very welcome, please submit a pull request or open an issue with an example that you feel is missing.
+Please let us know if any of the notebooks are outdated or not functioning with the current release of `Graphs.jl`. Contributions are very welcome, please submit a pull request or open an issue with an example that you feel is missing.
